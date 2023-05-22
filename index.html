@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="scrypts/encryptionUtils.js" defer></script>
+    <script src="scrypts/index.js" defer></script>
+    <title>Decodificador</title>
+</head>
+
+<body>
+    <main>
+        <div class="left--place">
+            <img src="images/icon.png" alt="Alura Icon">
+        </div>
+        <div class="middle--place">
+            <textarea id="textarea" placeholder="Digite seu texto"></textarea>
+            <div class="warning--place">
+                <img src="images/exclamation-icon.png" alt="Exclamation icon">
+                <p>Apenas letras minúsculas e sem acento.</p>
+            </div>
+            <div class="buttons--place">
+                <button class="button__encrypt" onclick="encryptEvent()">
+                    Criptografar
+                </button>
+                <button class="button__decrypt" onclick="decryptEvent()">
+                    Descriptografar
+                </button>
+            </div>
+        </div>
+        <div class="right--place">
+            <div class="no--message">
+                <img src="images/vector.svg" alt="Homem segurando uma lupa">
+                <span>Nenhuma mensagem encontrada</span>
+                <span>Digite um texto que você deseja criptografar ou descriptografar.</span>
+            </div>
+            <div class="result--message hidden">
+                <div class="result" id="result">
+                </div>
+                <button class="button-copy" onclick="copyEvent()">
+                    Copiar
+                </button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
